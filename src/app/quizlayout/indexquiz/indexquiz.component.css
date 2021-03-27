@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(247, 247, 247);
+}
+
+.mycontainer {
+    position: absolute;
+    width: calc(100% - 253px) ;
+    right: 0;
+    padding-top: 80px;
+    
+}

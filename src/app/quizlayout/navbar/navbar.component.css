@@ -1,0 +1,28 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.navbar .form-inline button {
+    background-color: #6c5ce7;
+    color: white;
+    transition: all 0.7s;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: #eb4d4b;
+    transition: all 0.7s;
+}
+
+.navbar-brand:hover {
+    color: #5d4fcc;
+}
+
+.navbar .form-inline button:hover {
+    background-color: #5d4fcc;
+}

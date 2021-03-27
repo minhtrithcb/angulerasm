@@ -1,0 +1,27 @@
+.btnaro {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(236, 236, 236);
+    transition: all 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnaro:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+.stikybtn {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stikybtn button{
+    width: 49%;
+    height: 50px;
+}

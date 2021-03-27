@@ -1,0 +1,32 @@
+<div class="container py-3 ">
+    <div class="container">
+        <h5 class="display-4 text-center mt-5">Bạn sẽ học gì hôm nay?</h5>
+
+        <div class="input-group headinput mt-5">
+            <input type="text" class="form-control" placeholder="Tìm kiếm các câu đố về bất kỳ chủ đề nào"
+                aria-label="Username" aria-describedby="addon-wrapping">
+
+            <button class="btn btn-light"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="container mt-5 d-flex justify-content-between">
+        <h2>Môn Học</h2>
+        <button class="btn btn-light">Xem thêm<i class="fas fa-chevron-right ml-2"></i></button>
+    </div>
+    <div class="course-list d-flex justify-content-between flex-wrap mt-5">
+        <div class="card" *ngFor="let item of subjects">
+            <span class="badge badge-secondary">Quiz</span>
+            <img src="assets/images/{{item.Logo}}" class="card-img-top" alt="...">
+            <div class="card-body pb-0">
+                <br>
+                <a href="quizs/{{item.Id}}" class="a-p" style="font-size: 1rem;">{{item.Name}}</a>
+                <hr>
+                <small class="d-flex justify-content-between">
+                    <p>Mã môn: {{item.Id}}</p>
+                    <p><i class="fas fa-list-ul mr-2"></i> 10 câu hỏi</p>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>

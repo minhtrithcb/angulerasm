@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    text-decoration: none !important;
+}
+
+.a-w {
+    color: white;
+    transition: all 0.7s;
+}
+.a-w:hover {
+    color: rgb(202, 202, 202);
+}
+
+.a-b {
+    color: rgb(0, 0, 0);
+    transition: all 0.7s;
+}
+.a-b:hover {
+    color: rgb(129, 129, 129);
+}
+
+.a-p {
+    color: #5d4fcc;
+    transition: all 0.7s;
+}
+.a-p:hover {
+    color: #4b3fa3;
+}
+
+.color-p {
+    background-color: #5d4fcc;
+    transition: all 0.7s;
+    color: white;
+}
+
+.color-p:hover {
+    color: white;
+    background-color: #4b3fa3;
+}

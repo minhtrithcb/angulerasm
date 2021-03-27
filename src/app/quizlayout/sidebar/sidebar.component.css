@@ -1,0 +1,78 @@
+.parentsidebar {
+    position: relative;
+}
+
+.sidebar {
+    top: 70px;
+    width: 253px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-right: 1px solid rgb(233, 233, 233);
+}
+
+.sidebar .fa-angular {
+    font-size: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #eb4d4b;
+}
+
+.sidebar .nav-item{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    transition: all 0.7s;
+    border-left: 5px solid white;
+}
+
+.active {
+    color: #6c5ce7;
+}
+
+.sidebar .nav-item a:not(.active){
+    color: #7f8c8d;
+}
+
+.sidebar .nav-item:hover{
+    border-left-color: #6c5ce7;
+}
+
+.sidebar .nav-item i{
+    margin-right: 7px;
+}
+
+.nav > button {
+    width: 80%;
+    background-color: #6c5ce7;
+    color: white;
+    transition: all 0.7s;
+    margin-left: 10%;
+}
+
+.nav > button:hover {
+    background-color: #5d4fcc;
+}
+
+.myhr {
+    width: 90%;
+    margin-left: 5%;
+    border-top: 2px solid #f1f1f1;
+}
+
+.login-q  {
+    padding: 0 5%;
+}
+
+.login-q .fa-user-plus {
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #5d4fcc;
+}
+
