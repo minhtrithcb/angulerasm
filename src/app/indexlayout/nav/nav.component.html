@@ -4,7 +4,7 @@
 
         <div class="logo mr-auto">
             <h1 class="text-light">
-                <a href="/home" style="color: #e74c3c;">
+                <a href="quiz" style="color: #e74c3c;">
                     <i class="fab fa-angular mr-2"></i>Quiz
                 </a>
             </h1>
@@ -12,21 +12,27 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="/home">Trang chủ</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#services">Liên hệ</a></li>
-                <li><a href="#portfolio">Hỏi đáp</a></li>
-                <li class="drop-down"><a href="">Khóa học <i class="fas fa-sort-down ml-2"></i></a>
+                <li routerLinkActive="active"><a routerLink="home">Trang chủ</a></li>
+                <li routerLinkActive="active"><a routerLink="about">Giới thiệu</a></li>
+                <li routerLinkActive="active"><a routerLink="services">Dịch vụ</a></li>
+                <li routerLinkActive="active"><a routerLink="contact">Liên hệ</a></li>
+                <li routerLinkActive="active"><a routerLink="faq">Hỏi đáp</a></li>
+                <li class="drop-down" routerLinkActive="active"><a href="quizs">Khóa học</a>
+
+                </li>
+                <li class="drop-down" routerLinkActive="active"><a routerLink="login">Tài khoản</a>
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li>
+                        <li><a routerLink="login">Đăng nhập</a></li>
+                        <li><a routerLink="signup">Đăng Ký</a></li>
+                        <li><a href="#">Quên mật khẩu</a></li>
+                        <hr>
+                        <li><a href="#">Đăng xuất</a></li>
+                        <li><a href="#">Đổi mật khẩu</a></li>
+                        <li><a href="#">Cài đặt tài khoản</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">Đăng Ký</a></li>
 
-                <li class="get-started"><a href="#about">Bắt đầu ngay</a></li>
+                <li class="get-started"><a href="quizs">Bắt đầu ngay</a></li>
             </ul>
         </nav><!-- .nav-menu -->
 

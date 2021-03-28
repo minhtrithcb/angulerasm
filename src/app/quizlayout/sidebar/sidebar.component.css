@@ -28,7 +28,7 @@
 }
 
 .active {
-    color: #6c5ce7;
+    color: #eb4d4b;
 }
 
 .sidebar .nav-item a:not(.active){
@@ -36,7 +36,7 @@
 }
 
 .sidebar .nav-item:hover{
-    border-left-color: #6c5ce7;
+    border-left-color: #eb4d4b;
 }
 
 .sidebar .nav-item i{
@@ -45,14 +45,14 @@
 
 .nav > button {
     width: 80%;
-    background-color: #6c5ce7;
+    background-color: #eb4d4b;
     color: white;
     transition: all 0.7s;
     margin-left: 10%;
 }
 
 .nav > button:hover {
-    background-color: #5d4fcc;
+    background-color: #c71c19;
 }
 
 .myhr {
@@ -73,6 +73,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: #5d4fcc;
+    color: #eb4d4b;
 }
 

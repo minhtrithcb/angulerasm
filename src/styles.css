@@ -27,6 +27,14 @@ a {
     color: #4b3fa3;
 }
 
+.a-r {
+    color: #eb4d4b;
+    transition: all 0.7s;
+}
+.a-r:hover {
+    color: #c71c19;
+}
+
 .color-p {
     background-color: #5d4fcc;
     transition: all 0.7s;
@@ -36,4 +44,24 @@ a {
 .color-p:hover {
     color: white;
     background-color: #4b3fa3;
+}
+
+.color-r {
+    background-color: #eb4d4b;
+    transition: all 0.7s;
+    color: white;
+}
+
+.color-r:hover {
+    color: white;
+    background-color: #c71c19;
+}
+
+.a-o {
+    color: #000000;
+    transition: all 0.7s;
+}
+
+.a-o:hover {
+    color: #e66d03;
 }

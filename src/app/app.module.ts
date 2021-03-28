@@ -14,6 +14,12 @@ import { NavComponent } from './indexlayout/nav/nav.component';
 import { HeroComponent } from './indexlayout/hero/hero.component';
 import { MainComponent } from './indexlayout/main/main.component';
 import { FooterComponent } from './indexlayout/footer/footer.component';
+import { AboutComponent } from './indexlayout/about/about.component';
+import { ServicesComponent } from './indexlayout/services/services.component';
+import { ContactComponent } from './indexlayout/contact/contact.component';
+import { FaqComponent } from './indexlayout/faq/faq.component';
+import { SignupComponent } from './indexlayout/signup/signup.component';
+import { LoginComponent } from './indexlayout/login/login.component';
 
 
 @NgModule({
@@ -30,6 +36,12 @@ import { FooterComponent } from './indexlayout/footer/footer.component';
     HeroComponent,
     MainComponent,
     FooterComponent,
+    AboutComponent,
+    ServicesComponent,
+    ContactComponent,
+    FaqComponent,
+    SignupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
 }
 
 .navbar .form-inline button {
-    background-color: #6c5ce7;
+    background-color: #eb4d4b;
     color: white;
     transition: all 0.7s;
 }
@@ -24,5 +24,5 @@
 }
 
 .navbar .form-inline button:hover {
-    background-color: #5d4fcc;
+    background-color: #d8201d;
 }
