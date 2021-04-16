@@ -1,6 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Subjects } from '../../db/Subjects.js';
-// import { Students } from '../db/Students.js';
+// import { Subjects } from '../../db/Subjects.js';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +9,20 @@ import { Subjects } from '../../db/Subjects.js';
 })
 export class HomeComponent implements OnInit {
 
-  subjects: any = Subjects;
-  // student: any = Students;
-  constructor() {
+  subjects: any;
+  // subjects: any = Subjects;
+  constructor(private http: HttpClient) {
     // console.log(this.student);
-
   }
 
   ngOnInit(): void {
+    this.getSubjects().subscribe(data => {
+      this.subjects = data;
+    });
+  }
+
+  getSubjects() {
+    return this.http.get("assets/db/Subject.json");
   }
 
 }

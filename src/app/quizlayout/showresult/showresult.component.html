@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="card mb-3 mt-3">
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/images/{{mySubjects.Logo}}" alt="...">
+            </div>
+            <div class="col-6">
+                <span class="badge badge-dark my-3">Quiz</span>
+                <br>
+                <h4 class="a-r">{{mySubjects.Name}}</h4>
+                <p style="color: gray; font-size: 0.8rem;">
+                    <span> <i class=" fas fa-bullseye mr-2"></i> Độ chính xác trung bình 92% </span>
+                    <span> <i class="fas fa-play mx-2"></i> 1000 lược tham gia</span>
+                </p>
+                <p style="color: gray; font-size: 0.8rem;">
+                    <span><i class="fas fa-graduation-cap mr-2"></i> Lớp 10</span>
+                    <span class="ml-3"> <i class="fas fa-book  mx-2"></i>Môn tin</span>
+                </p>
+            </div>
+            <div class="col-3 d-flex pt-3 justify-content-end aligt-center">
+                <span class="btnaro mx-2">
+                    <i class="fas fa-exclamation"></i>
+                </span>
+                <span class="btnaro mx-2">
+                    <i class="fas fa-copy"></i>
+                </span>
+                <span class="btnaro mx-2 mr-3">
+                    <i class="fas fa-print"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-primary" role="alert">
+        <div class="row">
+            <div class="col-9">
+                <h4 class="alert-heading">XONG RỒI!</h4>
+                <p>TỔNG ĐIỂM: {{user.mark}}/10</p>
+                <hr>
+                <p class="mb-0">Chúc mừng bạn đã hoàn thành bài quiz !</p>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+                <p style="font-size: 3rem; font-weight: 600;">{{user.mark}} ĐIỂM</p>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let quiz of listQuiz ; let i = index">
+        <div class="alert alert-light" role="alert">
+            <b> Câu {{i+1}}: {{quiz.Text}}</b>
+            <div class="mt-3" *ngFor="let qa of quiz.Answers ; let i = index">
+                <div *ngFor="let ua of user.ansewrs">
+                    <div *ngIf="ua.idCauHoi == quiz.Id">
+                        <div class="alert" [ngClass]="quiz.AnswerId? 'alert-success': 'alert-danger'"> {{i+1}}:
+                            {{qa.Text}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

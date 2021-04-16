@@ -20,6 +20,10 @@ import { ContactComponent } from './indexlayout/contact/contact.component';
 import { FaqComponent } from './indexlayout/faq/faq.component';
 import { SignupComponent } from './indexlayout/signup/signup.component';
 import { LoginComponent } from './indexlayout/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CountdownModule } from 'ngx-countdown';
+import { ShowresultComponent } from './quizlayout/showresult/showresult.component';
+
 
 
 @NgModule({
@@ -42,11 +46,14 @@ import { LoginComponent } from './indexlayout/login/login.component';
     FaqComponent,
     SignupComponent,
     LoginComponent,
+    ShowresultComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

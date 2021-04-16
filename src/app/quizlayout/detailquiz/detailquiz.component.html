@@ -3,12 +3,12 @@
     <div class="card mb-3 mt-3">
         <div class="row">
             <div class="col-3">
-                <img src="assets/images/ADBS.jpg" alt="...">
+                <img src="assets/images/{{mySubjects.Logo }}" alt="...">
             </div>
             <div class="col-6">
                 <span class="badge badge-dark my-3">Quiz</span>
                 <br>
-                <h4 class="a-r">The title</h4>
+                <h4 class="a-r">{{mySubjects.Name}}</h4>
                 <p style="color: gray; font-size: 0.8rem;">
                     <span> <i class=" fas fa-bullseye mr-2"></i> Độ chính xác trung bình 92% </span>
                     <span> <i class="fas fa-play mx-2"></i> 1000 lược tham gia</span>
@@ -34,11 +34,14 @@
 
     <div class="card mb-3 mt-3 p-5">
         <div class="row justify-content-between">
-            <div style="color: gray;"><i class="fas fa-bullseye mr-2"></i>Câu hỏi 1</div>
-            <div style="color: gray;"><i class="far fa-clock mr-2"></i>30 giây</div>
+            <div style="color: gray;"><i class="fas fa-bullseye mr-2"></i>Câu hỏi {{index+1}}</div>
+            <div style="color: gray;"><i class="far fa-clock mr-2"></i>
+                <countdown [config]="config" (event)="onTimerFinished($event)"></countdown>
+            </div>
         </div>
         <div class="row">
-            <p class="no-copy mt-2" style="font-weight: 600;">1. Đâu không phải là gôn ngữ lập trình
+            <p class="no-copy mt-2" style="font-weight: 600;">
+                <span>{{index + 1}}.{{ " "+ cauhoi.Text }}</span>
             </p>
         </div>
         <div class="row mb-3" style="position: relative; ">
@@ -48,10 +51,13 @@
         </div>
         <div class="row">
             <div class="option-list w-100">
-                <div class="option-item btn btn-light w-100 mb-3 text-left">Câu 1: java</div>
-                <div class="option-item btn btn-light w-100 mb-3 text-left">Câu 2: C#</div>
-                <div class="option-item btn btn-light w-100 mb-3 text-left">Câu 3: Python</div>
-                <div class="option-item btn btn-light w-100 mb-3 text-left">Câu 4: Html</div>
+
+                <div *ngFor="let item of cauhoi.Answers ; index as i " class="mb-3">
+                    <input type="radio" id="{{item.Id}}" name="answer" value="" class="mr-3"
+                        [checked]="checkda(item.Id)" (click)="chooseA($event)">
+                    <label for="{{item.Id}}"> Câu {{i+1}}: {{item.Text}} </label>
+                </div>
+
             </div>
         </div>
 
@@ -60,8 +66,18 @@
         </div>
 
         <div class="row  justify-content-between">
-            <p class="m-0">Câu 1 / 10 câu</p>
-            <button type="button" class="btn btn-primary">Câu tiếp theo</button>
+            <div class="col-4">
+                <p class="m-0">Câu {{index+1}} / 10 câu</p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-primary mr-3" (click)="prevQ()" [disabled]="index == 0">Câu trước
+                    đó</button>
+                <button type="button" class="btn btn-primary mr-3" (click)="nextQ()" [disabled]="index > 8">Câu tiếp
+                    theo</button>
+                <button type="button" class="btn btn-danger" (click)="finish()">Kết
+                    thúc</button>
+            </div>
+
         </div>
     </div>
     <!-- <div class="stikybtn">

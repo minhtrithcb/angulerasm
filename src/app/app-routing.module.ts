@@ -12,6 +12,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailquizComponent } from './quizlayout/detailquiz/detailquiz.component';
 import { HomeComponent } from './quizlayout/home/home.component';
 import { IndexquizComponent } from './quizlayout/indexquiz/indexquiz.component';
+import { ShowresultComponent } from './quizlayout/showresult/showresult.component';
 
 const routes: Routes = [
   {
@@ -74,6 +75,10 @@ const routes: Routes = [
       {
         path: ':name',
         component: DetailquizComponent
+      },
+      {
+        path: 'data/showresult',
+        component: ShowresultComponent
       }
     ]
   },
